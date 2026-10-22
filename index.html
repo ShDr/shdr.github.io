@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>שלומי</title>
+  <meta name="description" content="סייבר, פיתוח אפליקציות Web ומאמרים.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./">שלומי<span>.</span></a>
+      <nav>
+        <a href="#articles">מאמרים</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Cyber · Web Development</p>
+      <h1>סייבר ופיתוח Web</h1>
+      <p class="lead">עוסק במשימות סייבר ובפיתוח אפליקציות Web, עם רקע בעולם ה-UC.</p>
+      <div class="actions">
+        <a class="btn primary" href="#articles">למאמרים</a>
+        <a class="btn" href="#contact">צור קשר</a>
+      </div>
+    </section>
+
+
+    <section id="articles" class="container section">
+      <h2 class="section-title">מאמרים אחרונים</h2>
+      <ul class="post-list">
+        <li>
+          <a href="articles/first-post.html">
+            <time datetime="2026-10-22">22.10.2026</time>
+            <span class="post-title">ברוכים הבאים לבלוג</span>
+            <span class="post-excerpt">למה פתחתי בלוג, ועל מה אכתוב כאן.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2 class="section-title">צור קשר</h2>
+      <div class="links">
+        <a href="https://github.com/ShDr" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/shlomi-d-b6868267/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://stackoverflow.com/users/2682713/shdr" target="_blank" rel="noopener">Stack Overflow</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="y"></span> שלומי</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
