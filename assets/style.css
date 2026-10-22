@@ -111,3 +111,10 @@ a { color: inherit; }
   .post-list a { grid-template-columns: 1fr; }
   .post-list time { grid-row: auto; }
 }
+
+.section-lead { color: var(--muted); margin: -12px 0 20px; max-width: 620px; }
+.topics { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.topics span {
+  font-size: .85rem; padding: 4px 14px; border: 1px solid var(--line);
+  border-radius: 999px; color: var(--muted);
+}
