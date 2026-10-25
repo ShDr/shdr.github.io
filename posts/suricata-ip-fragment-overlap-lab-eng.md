@@ -45,14 +45,10 @@ detecting a fragmentation anomaly and detecting a malicious payload.
   Splunk                              Central event search and
                                       investigation interface
 
-  Test listener/service               A local service involved in the
-                                      test; port `8081` was the working
-                                      port
+
   -----------------------------------------------------------------------
 
-**Troubleshooting note:** The test initially failed because of a port
-conflict / incorrect port choice. Switching to port **8081** allowed the
-test to work. This was the decisive fix; the initial investigation had
+**Troubleshooting note:**  the initial investigation had
 focused too heavily on packet capture and reassembly possibilities.
 
 ## Method
@@ -85,16 +81,6 @@ fragments overlapped. The conclusion depends on the actual rule keywords
 and event that fired. Preserve the exact rule and alert record as
 evidence when publishing this lab.
 
-### 3. Resolve the port issue
-
-The test did not work as expected while the service/traffic path was
-using the conflicting port. After changing to **8081**, the scenario
-worked and the expected alert became visible.
-
-This was a useful troubleshooting lesson: before changing IDS capture
-modes, offload settings, or reassembly configuration, verify that the
-application is listening on the intended port and that the test traffic
-is reaching the expected endpoint.
 
 ### 4. Verify the alert and Splunk ingestion
 
@@ -156,7 +142,6 @@ specific Suricata version and target operating system.
     ranges
 -   [ ] Suricata alert record captured from `eve.json`
 -   [ ] Matching Splunk event/search screenshot
--   [ ] Port `8081` and the original port conflict documented
 -   [ ] IP addresses, hostnames, tokens, and other sensitive details
     redacted
 
@@ -164,8 +149,7 @@ specific Suricata version and target operating system.
 
 Built and troubleshot a controlled IP-fragment overlap detection lab
 using Ubuntu, Suricata, and Splunk. Duplicated a packet, modified
-payload bytes in the overlapping region, resolved a port conflict by
-moving the test to port `8081`, and verified that Suricata generated an
+payload bytes in the overlapping region, and verified that Suricata generated an
 alert within the Splunk workflow. The exercise reinforced the importance
 of validating the traffic path and distinguishing an anomaly alert from
 proof of end-to-end reassembly behavior.
