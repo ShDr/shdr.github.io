@@ -8,7 +8,11 @@
                      <div class="post-title-wrapper"><a href="post.html?p=<slug>">Title</a></div>
                      <div class="post-meta-wrapper"><time>DD-MM-YYYY</time></div>
                    </li>
-                Reading time is filled in automatically.
+                Reading time is filled in automatically, and a table of contents is built from the ## / ### headings.
+
+  Two languages: name the files <slug>-en.md and <slug>-heb.md (Hebrew renders right-to-left).
+                List the post once on the home page (either version); an EN | עב switch appears
+                on the home page and in the article whenever both files exist.
 
   Publication:  Put a PDF in docs/ (or link to an external URL) and add an <li> to "Publications".
 
@@ -30,7 +34,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -78,9 +82,9 @@
     <section id="writing">
       <span class="h1">Writing</span>
       <ul class="post-list">
-        <li class="post-item" data-post="first-post">
-          <div class="post-title-wrapper"><a href="post.html?p=first-post">Welcome to the blog</a></div>
-          <div class="post-meta-wrapper"><time>22-10-2026</time></div>
+        <li class="post-item" data-post="solitair-heb">
+          <div class="post-title-wrapper"><a href="post.html?p=solitair-heb" dir="auto">אלגוריתמי חיפוש לסוליטר</a></div>
+          <div class="post-meta-wrapper"><time>22-09-2025</time></div>
         </li>
       </ul>
     </section>
