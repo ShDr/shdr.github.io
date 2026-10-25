@@ -254,7 +254,7 @@ main[lang='he'] .back, main[lang='he'] .meta, main[lang='he'] .toc summary { fon
     background: transparent; border: 0; border-inline-start: 1px solid var(--line);
     border-radius: 0;
   }
-  main[dir='rtl'] .toc { left: auto; right: calc(50% + 400px); }
+  main[dir='rtl'] .toc { border-inline-start: 0; border-inline-end: 1px solid var(--line); }
   .toc summary { pointer-events: none; }
   .toc summary::before { content: '// '; }
   .toc[open] summary::before { content: '// '; }
